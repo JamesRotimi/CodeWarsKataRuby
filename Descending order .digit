@@ -1,0 +1,25 @@
+Your task is to make a function that can take any non-negative integer as a argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 21445 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 1254859723 Output: 9875543221
+
+def descending_order(n)
+
+n.digits.sort.reverse.join.to_i
+
+end
+
+digits(base) → [int]
+Returns the array including the digits extracted by place-value notation with radix base of int.
+
+base should be greater than or equal to 2.
+
+12345.digits      #=> [5, 4, 3, 2, 1]
+12345.digits(7)   #=> [4, 6, 6, 0, 5]
+12345.digits(100) #=> [45, 23, 1]
+
+-12345.digits(7)  #=> Math::DomainError
